@@ -1,0 +1,25 @@
+$color-primary: #ffff00; // yellow
+
+@mixin transform($property) {
+  -webkit-transform: rotate($property);
+  -ms-transform: rotate($property);
+  transform: rotate($property);
+}
+
+body {
+  background-color: $color-primary;
+}
+
+.navbar {
+  background-color: orangered;
+  padding: 1rem;
+  ul {
+    list-style:none;
+  }
+  li {
+    text-align: center;
+    margin: 1rem;
+    @include transform(rotate(20deg));
+  }
+}
+
